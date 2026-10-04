@@ -1,0 +1,41 @@
+# area: machine name, e.g. oahu
+# built: ISO date the registry was seeded
+# sections: interest lanes; each holds a list of sources
+# source fields:
+#   handle: display name / @handle
+#   url: link, or null for web-only
+#   type: org | individual | hashtag | venue (+ subtype in parens, e.g. "individual (DJ)")
+#   followers: last observed count, or null
+#   why: one-line fit note
+#   confidence: confirmed | his-network | inferred-web | web-only
+#   added / added_by: ISO date; seed | auto | manual
+#   rating: float, tuned by finding ratings (never auto-removes the source)
+#   follower_snapshots: [{date, count}] — velocity computed per run, normalized within-area
+#   active: bool — per-source toggle
+
+area: example-city
+built: "2026-10-04"
+sections:
+  music:
+    - handle: "@examplevenue"
+      url: "https://www.instagram.com/examplevenue"
+      type: "org (venue)"
+      followers: 14000
+      why: "Chinatown nightclub; First Friday parties, DJ sets"
+      confidence: confirmed
+      added: "2026-10-04"
+      added_by: seed
+      rating: 0.0
+      follower_snapshots: []
+      active: true
+    - handle: "@exampledj"
+      url: "https://www.instagram.com/exampledj"
+      type: "individual (DJ)"
+      followers: 1040
+      why: "Local DJ, DIY ethos"
+      confidence: his-network
+      added: "2026-10-04"
+      added_by: seed
+      rating: 0.0
+      follower_snapshots: []
+      active: true

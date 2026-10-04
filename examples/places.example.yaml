@@ -1,0 +1,37 @@
+# Evergreen places atlas. Categories: work (laptop verdicts), eat, visit.
+# place fields:
+#   name, neighborhood, address (null if unconfirmed — never invent one)
+#   why: one-line fit note
+#   laptop_verdict (work only): camp-friendly | short session | grab-and-go | unverified
+#     (+ free-text detail; inferred verdicts marked as such at seed time)
+#   rating: float, tuned by user ratings
+#   added / added_by: ISO date; seed | auto | manual
+
+area: example-city
+built: "2026-10-04"
+categories:
+  work:
+    - name: "Example Coffee"
+      neighborhood: "Downtown"
+      address: "123 Main St"
+      laptop_verdict: "camp-friendly — free wifi, outlets along the walls"
+      why: "Specialty pour-over, comfortable for long sessions"
+      rating: 0.0
+      added: "2026-10-04"
+      added_by: seed
+  eat:
+    - name: "Example Kitchen"
+      neighborhood: "Chinatown"
+      address: "456 King St"
+      why: "Local-grade lunch spot, cash-friendly"
+      rating: 0.0
+      added: "2026-10-04"
+      added_by: seed
+  visit:
+    - name: "Example Gallery"
+      neighborhood: "Arts district"
+      address: null
+      why: "Rotating local-artist shows, free entry"
+      rating: 0.0
+      added: "2026-10-04"
+      added_by: seed
